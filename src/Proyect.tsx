@@ -13,7 +13,7 @@ function Proyect() {
       {/* Card del proyecto */}
       <div className="bg-[#0f172a] border border-[#38bdf8]/30 rounded-xl shadow-lg shadow-[#38bdf8]/20 p-6 w-full max-w-3xl">
         <img
-          src="/public/assets/imagen-portafolio.png"
+          src="/assets/imagen-portafolio.png"
           alt="Preview de mi portafolio"
           className="rounded-lg shadow-md mb-6 w-full h-70 mx-auto object-cover"
         />

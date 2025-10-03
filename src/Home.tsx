@@ -42,7 +42,7 @@ function Home() {
         <div className="flex justify-center items-center w-80 h-80 md:w-full md:h-full">
           <img
             className="rounded-full shadow-xl border-4 border-white"
-            src="/public/assets/My-avatar.png"
+            src="/assets/My-avatar.png"
             alt="img-angel"
           />
         </div>
