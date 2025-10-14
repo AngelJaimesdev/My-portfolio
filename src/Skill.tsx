@@ -5,7 +5,7 @@ function Skill() {
     "Node.js", "NestJS", "Laravel",
     "MySQL", "PostgreSQL",
     "Firebase", "Cloud Functions", "Microservices",
-    "Git", "GitHub"
+    "Git", "GitHub",'Sql'
   ];
 
   return (
@@ -13,12 +13,12 @@ function Skill() {
       
       {/* Título */}
       <h1 className="text-3xl md:text-4xl font-bold text-[#38bdf8] mt-10 text-center">
-        Habilidades & Tecnologías
+        Skills & Technologies
       </h1>
 
       {/* Subtítulo */}
       <h2 className="md:text-lg text-[#94a3b8] mb-8 text-center max-w-2xl">
-        Estas son las tecnologías y herramientas que utilizo para crear experiencias web modernas y escalables.
+        These are the technologies and tools I use to create modern and scalable web experiences.
       </h2>
 
       {/* Lista de Skills */}

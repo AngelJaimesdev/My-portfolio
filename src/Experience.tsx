@@ -4,18 +4,18 @@ function Experience() {
   const experiences = [
     {
       company: "Alpes Solutions S.A.S - Outsourcing Davinci",
-      date: "23 Noviembre 2023 - 31 Julio 2025",
+      date: "23 November 2023 - 31 July 2025",
       current: false,
       description:
-        "He formado parte de distintos proyectos dentro de la empresa, colaborando con el equipo, cumpliendo con mis responsabilidades y proponiendo ideas que han contribuido a que las tareas se desarrollen de manera eficiente y sin contratiempos.",
+        "I have been part of various projects within the company, collaborating with the team, fulfilling my responsibilities, and proposing ideas that have contributed to tasks being carried out efficiently and without setbacks.",
       icon: <Briefcase className="text-[#38bdf8] w-5 h-5" />,
     },
     {
       company: "Alpes Solutions S.A.S",
-      date: "16 Junio - 22 Noviembre 2023 (5 Meses)",
+      date: "16 June - 22 November 2023 (5 Months)",
       current: false,
       description:
-        "Fortalecí los conocimientos que había desarrollado por cuenta propia, integrándolos al trabajo colaborativo. Además, en el entorno laboral adquirí habilidades blandas esenciales que me han permitido adaptarme mejor y comunicarme de forma efectiva con el equipo.",
+        "I strengthened the knowledge I had developed on my own by integrating it into collaborative work. In addition, in the work environment I acquired essential soft skills that have allowed me to adapt better and communicate effectively with the team.",
       icon: <MonitorCheck className="text-[#38bdf8] w-5 h-5" />,
       link: "https://alpessolutions.com/",
     },
@@ -28,7 +28,7 @@ function Experience() {
     >
       {/* Título */}
       <h1 className="mt-10 text-3xl text-center md:text-4xl font-bold text-[#38bdf8] mb-10">
-        Experiencia Laboral
+        Work Experience
       </h1>
 
       {/* Línea de tiempo */}
@@ -51,7 +51,7 @@ function Experience() {
             {/* Badge o Link */}
             {exp.current ? (
               <h4 className="inline-block mt-3 bg-green-600 text-white text-xs font-medium px-3 py-1 rounded-md">
-                Activo
+                Active
               </h4>
             ) : exp.link ? (
               <a
@@ -60,11 +60,11 @@ function Experience() {
                 rel="noopener noreferrer"
                 className="inline-block mt-3 bg-[#0f172a] border border-[#38bdf8]/30 text-white text-xs font-medium px-3 py-2 rounded-md hover:bg-[#1e293b] transition"
               >
-                Visitar Página
+                Visit Page
               </a>
             ) : (
               <h4 className="inline-block mt-3 bg-red-600 text-white text-xs font-medium px-3 py-1 rounded-md">
-                Finalizado
+                Finished
               </h4>
             )}
           </div>

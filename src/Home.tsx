@@ -12,9 +12,9 @@ function Home() {
       {/* Body */}
       <div className="h-full w-full flex flex-col md:flex-row justify-center items-center gap-10 p-10">
         <div className="w-full h-full flex flex-col justify-center items-center md:items-start md:pl-20 gap-5 md:text-4xl font-bold text-[#f8fafc]">
-          <h1 className="text-white">I am into Web Develop</h1>
+          <h1 className="text-white">I am into software engineering</h1>
           <h2 className="text-[#94a3b8]">
-            I craft clean and dynamic web experiences using modern technologies.
+            I create clean and dynamic web experiences using modern technologies.
           </h2>
           <a
             href="/CV/Cv-angel_jaimes.pdf"

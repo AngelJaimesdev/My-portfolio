@@ -3,11 +3,11 @@ function Proyect() {
     <div id="Proyects" className="w-full min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] flex flex-col items-center justify-center p-10">
       
       {/* Título */}
-      <h1 className="text-3xl text-center md:text-4xl font-bold text-[#38bdf8] mt-10">Proyectos</h1>
+      <h1 className="text-3xl text-center md:text-4xl font-bold text-[#38bdf8] mt-10">Projects</h1>
       
       {/* Subtítulo */}
       <h2 className="md:text-lg text-[#94a3b8] mb-10 text-center max-w-2xl">
-        Este portafolio es un proyecto personal diseñado para mostrar mis habilidades y experiencia en desarrollo web.
+        This portfolio is a personal project designed to showcase my skills and experience in web development.
       </h2>
 
       {/* Card del proyecto */}
