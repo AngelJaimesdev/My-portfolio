@@ -1,7 +1,23 @@
-import { Briefcase, MonitorCheck } from "lucide-react";
+import { Briefcase, MonitorCheck, Landmark, Download, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { socialLinks } from "./socialLinks";
+import { useReveal, revealClass } from "./useReveal";
+
+const CERTIFICATE_PATH = "/CV/Certificado-laboral-Angel-Jaimes.pdf";
 
 function Experience() {
+  const { ref: titleRef, visible: titleVisible } = useReveal<HTMLHeadingElement>();
+  const { ref: timelineRef, visible: timelineVisible } = useReveal<HTMLDivElement>();
+  const { ref: contactRef, visible: contactVisible } = useReveal<HTMLDivElement>();
+
   const experiences = [
+    {
+      company: "UARIV - Unidad para la Atención y Reparación Integral a las Víctimas",
+      date: "30 January 2026 - Present",
+      current: true,
+      description:
+        "I work as a software developer, contributing to the development and maintenance of systems that support the institution's mission of serving and supporting victims.",
+      icon: <Landmark className="text-[#38bdf8] w-5 h-5" />,
+    },
     {
       company: "Alpes Solutions S.A.S - Outsourcing Davinci",
       date: "23 November 2023 - 31 July 2025",
@@ -9,6 +25,7 @@ function Experience() {
       description:
         "I have been part of various projects within the company, collaborating with the team, fulfilling my responsibilities, and proposing ideas that have contributed to tasks being carried out efficiently and without setbacks.",
       icon: <Briefcase className="text-[#38bdf8] w-5 h-5" />,
+      certificate: CERTIFICATE_PATH,
     },
     {
       company: "Alpes Solutions S.A.S",
@@ -18,6 +35,7 @@ function Experience() {
         "I strengthened the knowledge I had developed on my own by integrating it into collaborative work. In addition, in the work environment I acquired essential soft skills that have allowed me to adapt better and communicate effectively with the team.",
       icon: <MonitorCheck className="text-[#38bdf8] w-5 h-5" />,
       link: "https://alpessolutions.com/",
+      certificate: CERTIFICATE_PATH,
     },
   ];
 
@@ -27,16 +45,20 @@ function Experience() {
       className="w-full min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white flex flex-col items-center py-16 px-12"
     >
       {/* Título */}
-      <h1 className="mt-10 text-3xl text-center md:text-4xl font-bold text-[#38bdf8] mb-10">
+      <h1
+        ref={titleRef}
+        className={`mt-10 text-3xl text-center md:text-4xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent mb-10 ${revealClass(titleVisible)}`}
+      >
         Work Experience
       </h1>
 
       {/* Línea de tiempo */}
-      <div className="relative border-l-2 border-[#38bdf8]/30 w-full max-w-4xl">
+      <div ref={timelineRef} className="relative border-l-2 border-[#38bdf8]/30 w-full max-w-4xl">
         {experiences.map((exp, i) => (
           <div
             key={i}
-            className="mb-12 ml-6 relative pl-8"
+            style={{ transitionDelay: `${i * 150}ms` }}
+            className={`mb-12 ml-6 relative pl-8 ${revealClass(timelineVisible)}`}
           >
             {/* Círculo con icono */}
             <h4 className="absolute -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-[#0f172a] border border-[#38bdf8]/40 shadow shadow-[#38bdf8]/20">
@@ -48,27 +70,92 @@ function Experience() {
             <p className="text-sm text-[#94a3b8]">{exp.date}</p>
             <p className="mt-2 text-gray-300">{exp.description}</p>
 
-            {/* Badge o Link */}
-            {exp.current ? (
-              <h4 className="inline-block mt-3 bg-green-600 text-white text-xs font-medium px-3 py-1 rounded-md">
-                Active
-              </h4>
-            ) : exp.link ? (
-              <a
-                href={exp.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-3 bg-[#0f172a] border border-[#38bdf8]/30 text-white text-xs font-medium px-3 py-2 rounded-md hover:bg-[#1e293b] transition"
-              >
-                Visit Page
-              </a>
-            ) : (
-              <h4 className="inline-block mt-3 bg-red-600 text-white text-xs font-medium px-3 py-1 rounded-md">
-                Finished
-              </h4>
-            )}
+            {/* Badge, Link y Certificado */}
+            <div className="flex flex-wrap items-center gap-3 mt-3">
+              {exp.current ? (
+                <h4 className="bg-emerald-500/90 text-white text-xs font-medium px-3 py-1 rounded-md shadow-md shadow-emerald-500/30">
+                  Active
+                </h4>
+              ) : (
+                <h4 className="bg-slate-600/80 text-white text-xs font-medium px-3 py-1 rounded-md">
+                  Finished
+                </h4>
+              )}
+
+              {exp.link && (
+                <a
+                  href={exp.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#0f172a] border border-[#38bdf8]/30 text-white text-xs font-medium px-3 py-2 rounded-md hover:border-sky-400/70 hover:shadow-md hover:shadow-sky-500/20 transition-all duration-300"
+                >
+                  Visit Page
+                </a>
+              )}
+
+              {exp.certificate && (
+                <a
+                  href={exp.certificate}
+                  download
+                  className="flex items-center gap-1 bg-[#0f172a] border border-[#38bdf8]/30 text-white text-xs font-medium px-3 py-2 rounded-md hover:border-sky-400/70 hover:shadow-md hover:shadow-sky-500/20 transition-all duration-300"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Download certificate
+                </a>
+              )}
+            </div>
           </div>
         ))}
+      </div>
+
+      {/* Contacto */}
+      <div
+        ref={contactRef}
+        className={`w-full max-w-4xl mt-8 flex flex-col items-center text-center border-t border-sky-500/20 pt-10 ${revealClass(contactVisible)}`}
+      >
+        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">
+          Let's build something together
+        </h2>
+        <p className="text-[#94a3b8] mt-2 max-w-xl">
+          I'm open to new opportunities and collaborations. Feel free to reach out.
+        </p>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+          <a
+            href={socialLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#0f172a] border border-[#38bdf8]/30 text-white text-sm font-medium px-4 py-2 rounded-xl hover:border-sky-400/70 hover:shadow-md hover:shadow-sky-500/20 transition-all duration-300"
+          >
+            <Github className="w-4 h-4" />
+            GitHub
+          </a>
+          <a
+            href={socialLinks.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#0f172a] border border-[#38bdf8]/30 text-white text-sm font-medium px-4 py-2 rounded-xl hover:border-sky-400/70 hover:shadow-md hover:shadow-sky-500/20 transition-all duration-300"
+          >
+            <Linkedin className="w-4 h-4" />
+            LinkedIn
+          </a>
+          <a
+            href={`mailto:${socialLinks.email}`}
+            className="flex items-center gap-2 bg-[#0f172a] border border-[#38bdf8]/30 text-white text-sm font-medium px-4 py-2 rounded-xl hover:border-sky-400/70 hover:shadow-md hover:shadow-sky-500/20 transition-all duration-300"
+          >
+            <Mail className="w-4 h-4" />
+            Email
+          </a>
+          <a
+            href={socialLinks.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white text-sm font-medium px-4 py-2 rounded-xl shadow-lg hover:from-sky-400 hover:to-blue-500 hover:shadow-xl transition-all duration-300"
+          >
+            <MessageCircle className="w-4 h-4" />
+            WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   );
