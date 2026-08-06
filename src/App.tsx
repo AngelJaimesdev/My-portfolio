@@ -3,6 +3,7 @@ import Skill from "./Skill";
 import Experience from "./Experience";
 import Proyect from "./Proyect";
 import CustomCursor from "./CustomCursor";
+import Navbar from "./Navbar";
 import { useEffect } from "react";
 
 function App() {
@@ -19,20 +20,23 @@ function App() {
   }, []);
 
    return (
-      <div className="h-screen w-full overflow-y-scroll snap-mandatory snap-y scroll-smooth">
+      <div className="h-screen w-full flex flex-col">
           <CustomCursor />
-         <section id="Home" className="snap-start">
-            <Home />
-         </section>
-         <section id="Skill" className="snap-start">
-            <Skill />
-         </section>
-         <section id="Proyect" className="snap-start">
-            <Proyect />
-         </section>
-         <section id="Experience" className="snap-start">
-            <Experience />
-         </section>
+          <Navbar />
+          <div className="flex-1 w-full overflow-y-scroll snap-mandatory snap-y scroll-smooth">
+            <section id="Home" className="min-h-[calc(100vh-3.5rem)] snap-start">
+               <Home />
+            </section>
+            <section id="Skill" className="min-h-[calc(100vh-3.5rem)] snap-start">
+               <Skill />
+            </section>
+            <section id="Proyect" className="min-h-[calc(100vh-3.5rem)] snap-start">
+               <Proyect />
+            </section>
+            <section id="Experience" className="min-h-[calc(100vh-3.5rem)] snap-start">
+               <Experience />
+            </section>
+          </div>
       </div>
    )
 }

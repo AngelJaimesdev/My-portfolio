@@ -1,5 +1,6 @@
 import { Download } from "lucide-react";
 import { useReveal, revealClass } from "./useReveal";
+import AnimatedBackground from "./AnimatedBackground";
 
 function Proyect() {
   const { ref: titleRef, visible: titleVisible } = useReveal<HTMLHeadingElement>();
@@ -24,12 +25,13 @@ function Proyect() {
   ];
 
   return (
-    <div id="Proyects" className="w-full min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] flex flex-col items-center justify-center p-10">
+    <div id="Proyects" className="relative z-0 overflow-hidden w-full min-h-[calc(100vh-3.5rem)] bg-gradient-to-br from-[#050505] to-[#0d0d0f] flex flex-col items-center justify-center p-10">
+      <AnimatedBackground />
 
       {/* Título */}
       <h1
         ref={titleRef}
-        className={`text-3xl text-center md:text-4xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent mt-10 ${revealClass(titleVisible)}`}
+        className={`relative z-10 text-3xl text-center md:text-4xl font-bold bg-gradient-to-r from-[#2563eb] to-[#0ea5e9] bg-clip-text text-transparent mt-10 ${revealClass(titleVisible)}`}
       >
         Projects
       </h1>
@@ -37,18 +39,18 @@ function Proyect() {
       {/* Subtítulo */}
       <h2
         style={{ transitionDelay: "100ms" }}
-        className={`md:text-lg text-[#94a3b8] mb-10 text-center max-w-2xl ${revealClass(titleVisible)}`}
+        className={`relative z-10 md:text-lg text-[#94a3b8] mb-10 text-center max-w-2xl ${revealClass(titleVisible)}`}
       >
         A selection of projects where I apply my skills in web and mobile development.
       </h2>
 
       {/* Cards de proyectos */}
-      <div ref={listRef} className="flex flex-col md:flex-row gap-8 w-full max-w-5xl">
+      <div ref={listRef} className="relative z-10 flex flex-col md:flex-row gap-8 w-full max-w-5xl">
         {projects.map((project, i) => (
           <div
             key={project.title}
             style={{ transitionDelay: `${i * 150}ms` }}
-            className={`bg-[#0f172a] border border-[#38bdf8]/30 rounded-xl shadow-lg shadow-[#38bdf8]/20 p-6 w-full md:flex-1 hover:border-sky-400/60 hover:shadow-xl hover:shadow-sky-500/30 hover:-translate-y-1 transition-all duration-300 ${revealClass(listVisible)}`}
+            className={`bg-[#050505] border border-[#2563eb]/30 rounded-xl shadow-lg shadow-[#2563eb]/20 p-6 w-full md:flex-1 hover:border-[#2563eb]/60 hover:shadow-xl hover:shadow-[#1d4ed8]/30 hover:-translate-y-1 transition-all duration-300 ${revealClass(listVisible)}`}
           >
             <img
               src={project.image}
@@ -66,7 +68,7 @@ function Proyect() {
               {project.techs.map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 rounded-full bg-[#0f172a] text-[#f8fafc] text-sm font-medium border border-[#38bdf8]/30 shadow-md shadow-[#38bdf8]/20 hover:border-sky-400/70 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300"
+                  className="px-4 py-2 rounded-full bg-[#050505] text-[#f8fafc] text-sm font-medium border border-[#2563eb]/30 shadow-md shadow-[#2563eb]/20 hover:border-[#2563eb]/70 hover:shadow-lg hover:shadow-[#1d4ed8]/30 transition-all duration-300"
                 >
                   {tech}
                 </span>
@@ -79,7 +81,7 @@ function Proyect() {
                 <a
                   href={project.apk}
                   download
-                  className="flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white px-5 py-2 rounded-xl shadow-lg hover:from-sky-400 hover:to-blue-500 transition-all duration-300"
+                  className="flex items-center gap-2 bg-gradient-to-r from-[#1d4ed8] to-[#1e3a8a] text-white px-5 py-2 rounded-xl shadow-lg hover:from-[#2563eb] hover:to-[#0ea5e9] transition-all duration-300"
                 >
                   <Download className="w-4 h-4" />
                   Download APK
