@@ -23,17 +23,17 @@ function App() {
       <div className="h-screen w-full flex flex-col">
           <CustomCursor />
           <Navbar />
-          <div className="flex-1 w-full overflow-y-scroll snap-mandatory snap-y scroll-smooth">
-            <section id="Home" className="min-h-[calc(100vh-3.5rem)] snap-start">
+          <div className="flex-1 w-full overflow-y-scroll scroll-smooth">
+            <section id="Home" className="min-h-[calc(100vh-3.5rem)]">
                <Home />
             </section>
-            <section id="Skill" className="min-h-[calc(100vh-3.5rem)] snap-start">
+            <section id="Skill" className="min-h-[calc(100vh-3.5rem)]">
                <Skill />
             </section>
-            <section id="Proyect" className="min-h-[calc(100vh-3.5rem)] snap-start">
+            <section id="Proyect" className="min-h-[calc(100vh-3.5rem)]">
                <Proyect />
             </section>
-            <section id="Experience" className="min-h-[calc(100vh-3.5rem)] snap-start">
+            <section id="Experience" className="min-h-[calc(100vh-3.5rem)]">
                <Experience />
             </section>
           </div>
