@@ -11,7 +11,7 @@ function Proyect() {
       title: "Personal Portfolio",
       description:
         "This portfolio is a personal project designed to showcase my skills and experience in web development.",
-      image: "/assets/imagen-portafolio.png",
+      image: "/assets/imagen-portafolio.webp",
       techs: ["React", "TypeScript", "TailwindCSS"],
     },
     {
@@ -25,7 +25,7 @@ function Proyect() {
   ];
 
   return (
-    <div id="Proyects" className="relative z-0 overflow-hidden w-full min-h-[calc(100vh-3.5rem)] bg-gradient-to-br from-[#050505] to-[#0d0d0f] flex flex-col items-center justify-center p-10">
+    <div className="relative z-0 overflow-hidden w-full min-h-[calc(100vh-3.5rem)] bg-gradient-to-br from-[#050505] to-[#0d0d0f] flex flex-col items-center justify-center p-10">
       <AnimatedBackground />
 
       {/* Título */}

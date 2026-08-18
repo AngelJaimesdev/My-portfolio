@@ -26,6 +26,8 @@ function Navbar() {
         <li><a className="hover:text-[#2563eb]" href="#Skill">Skill</a></li>
         <li><a className="hover:text-[#2563eb]" href="#Proyects">Projects</a></li>
         <li><a className="hover:text-[#2563eb]" href="#Experience">Experience</a></li>
+        <li><a className="hover:text-[#2563eb]" href="#Services">Services</a></li>
+        <li><a className="hover:text-[#2563eb]" href="#Contact">Contact</a></li>
       </ul>
 
       {/* Redes sociales (solo en escritorio) */}
@@ -48,6 +50,8 @@ function Navbar() {
           <a className="hover:text-[#2563eb]" href="#Skill" onClick={() => setOpen(false)}>Skill</a>
           <a className="hover:text-[#2563eb]" href="#Proyects" onClick={() => setOpen(false)}>Projects</a>
           <a className="hover:text-[#2563eb]" href="#Experience" onClick={() => setOpen(false)}>Experience</a>
+          <a className="hover:text-[#2563eb]" href="#Services" onClick={() => setOpen(false)}>Services</a>
+          <a className="hover:text-[#2563eb]" href="#Contact" onClick={() => setOpen(false)}>Contact</a>
 
           <div className="flex items-center gap-5 pt-4 border-t border-[#1d4ed8]/20">
             <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-[#2563eb] transition-colors">

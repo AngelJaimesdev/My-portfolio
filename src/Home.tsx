@@ -8,8 +8,7 @@ function Home() {
 
   return (
     <div
-      id="Home"
-      className="relative z-0 overflow-hidden bg-gradient-to-br from-[#050505] to-[#0d0d0f] min-h-[calc(100vh-3.5rem)] cursor-pointer"
+      className="relative z-0 overflow-hidden bg-gradient-to-br from-[#050505] to-[#0d0d0f] min-h-[calc(100vh-3.5rem)]"
     >
       <AnimatedBackground />
 
@@ -60,7 +59,7 @@ function Home() {
           <div className="absolute w-64 h-80 md:w-80 md:h-96 bg-[#1d4ed8]/15 rounded-full blur-3xl" />
           <img
             className="relative rounded-3xl shadow-xl shadow-[#1d4ed8]/20 border-4 border-[#2563eb]/50 w-64 md:w-100"
-            src="/assets/avatar-outdoor.jpg"
+            src="/assets/avatar-outdoor.webp"
             alt="Angel Jaimes"
           />
         </div>

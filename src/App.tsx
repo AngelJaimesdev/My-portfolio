@@ -2,6 +2,8 @@ import Home from "./Home";
 import Skill from "./Skill";
 import Experience from "./Experience";
 import Proyect from "./Proyect";
+import Services from "./Services";
+import Contact from "./Contact";
 import CustomCursor from "./CustomCursor";
 import Navbar from "./Navbar";
 import { useEffect } from "react";
@@ -30,11 +32,17 @@ function App() {
             <section id="Skill" className="min-h-[calc(100vh-3.5rem)]">
                <Skill />
             </section>
-            <section id="Proyect" className="min-h-[calc(100vh-3.5rem)]">
+            <section id="Proyects" className="min-h-[calc(100vh-3.5rem)]">
                <Proyect />
             </section>
             <section id="Experience" className="min-h-[calc(100vh-3.5rem)]">
                <Experience />
+            </section>
+            <section id="Services" className="min-h-[calc(100vh-3.5rem)]">
+               <Services />
+            </section>
+            <section id="Contact" className="min-h-[calc(100vh-3.5rem)]">
+               <Contact />
             </section>
           </div>
       </div>

@@ -16,7 +16,7 @@ function Skill() {
   ];
 
   return (
-    <div id="Skill" className="relative z-0 overflow-hidden w-full min-h-[calc(100vh-3.5rem)] bg-gradient-to-br from-[#0d0d0f] to-[#050505] flex flex-col items-center justify-center p-10">
+    <div className="relative z-0 overflow-hidden w-full min-h-[calc(100vh-3.5rem)] bg-gradient-to-br from-[#0d0d0f] to-[#050505] flex flex-col items-center justify-center p-10">
       <AnimatedBackground />
 
       {/* Título */}
