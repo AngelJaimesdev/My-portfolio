@@ -26,11 +26,6 @@ function Testimonials() {
       linkedin: "https://www.linkedin.com/in/felipegarces16",
       ...t.testimonials.carlos,
     },
-    {
-      name: "Luis Enrique Suarez Velasquez",
-      linkedin: "https://www.linkedin.com/in/lesvdev",
-      ...t.testimonials.luis,
-    },
   ];
 
   return (
@@ -52,7 +47,7 @@ function Testimonials() {
 
       <div
         ref={listRef}
-        className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl"
+        className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl"
       >
         {people.map((person, i) => (
           <figure

@@ -118,11 +118,6 @@ const en = {
       quote:
         "A developer focused on mobile and web applications, specialized in Flutter and digital tourism projects. He has worked on innovative solutions that integrate frontend and backend with a practical and academic mindset.",
     },
-    luis: {
-      role: "Computer Engineer · Junior Data Scientist · Junior Developer · Technology teacher at Instituto Educativo CASD José Prudencio Padilla",
-      quote:
-        "A committed and versatile professional with experience in backend development, data science and research projects. Known for his leadership, honesty and ability to coordinate teams on technological and scientific solutions.",
-    },
   },
   services: {
     title: "Services",
@@ -307,11 +302,6 @@ const es: Dict = {
       role: "Ingeniero Informático · Desarrollador FullStack y Flutter (Programador Full Stack en SDSTI)",
       quote:
         "Desarrollador con enfoque en aplicaciones móviles y web, especializado en Flutter y proyectos de turismo digital. Ha trabajado en soluciones innovadoras que integran frontend y backend con visión práctica y académica.",
-    },
-    luis: {
-      role: "Ingeniero Informático · Data Scientist Junior · Programador Junior · Profesor de educación tecnológica en Instituto Educativo CASD José Prudencio Padilla",
-      quote:
-        "Profesional comprometido y versátil, con experiencia en desarrollo backend, ciencia de datos y proyectos de investigación. Se caracteriza por su liderazgo, honestidad y capacidad para coordinar equipos en soluciones tecnológicas y científicas.",
     },
   },
   services: {
