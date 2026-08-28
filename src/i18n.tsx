@@ -16,6 +16,7 @@ const en = {
     skill: "Skills",
     projects: "Projects",
     experience: "Experience",
+    testimonials: "Reviews",
     services: "Services",
     contact: "Contact",
   },
@@ -104,6 +105,25 @@ const en = {
         "I strengthened the knowledge I had developed on my own by integrating it into collaborative work. In addition, in the work environment I acquired essential soft skills that have allowed me to adapt better and communicate effectively with the team.",
     },
   },
+  testimonials: {
+    title: "Recommendations",
+    subtitle: "What colleagues I've worked with say.",
+    jeferson: {
+      role: "Computer Engineer · Full Stack Web Developer at Clínica Materno Infantil San Luis (formerly at Alpes Solutions S.A.S)",
+      quote:
+        "A proactive, results-oriented computer engineer with experience building and optimizing web applications. He stands out for his teamwork and for delivering efficient solutions in clinical and corporate environments.",
+    },
+    carlos: {
+      role: "Computer Engineer · Full Stack & Flutter Developer (Full Stack Programmer at SDSTI)",
+      quote:
+        "A developer focused on mobile and web applications, specialized in Flutter and digital tourism projects. He has worked on innovative solutions that integrate frontend and backend with a practical and academic mindset.",
+    },
+    luis: {
+      role: "Computer Engineer · Junior Data Scientist · Junior Developer · Technology teacher at Instituto Educativo CASD José Prudencio Padilla",
+      quote:
+        "A committed and versatile professional with experience in backend development, data science and research projects. Known for his leadership, honesty and ability to coordinate teams on technological and scientific solutions.",
+    },
+  },
   services: {
     title: "Services",
     subtitle:
@@ -186,6 +206,7 @@ const es: Dict = {
     skill: "Habilidades",
     projects: "Proyectos",
     experience: "Experiencia",
+    testimonials: "Reseñas",
     services: "Servicios",
     contact: "Contacto",
   },
@@ -272,6 +293,25 @@ const es: Dict = {
       date: "Junio - Noviembre 2023 (5 meses)",
       description:
         "Reforcé el conocimiento que había desarrollado por mi cuenta integrándolo al trabajo colaborativo. Además, en el entorno laboral adquirí habilidades blandas esenciales que me han permitido adaptarme mejor y comunicarme de forma efectiva con el equipo.",
+    },
+  },
+  testimonials: {
+    title: "Recomendaciones",
+    subtitle: "Lo que dicen colegas con los que he trabajado.",
+    jeferson: {
+      role: "Ingeniero Informático · Desarrollador Web Full Stack en Clínica Materno Infantil San Luis (antes en Alpes Solutions S.A.S)",
+      quote:
+        "Ingeniero informático proactivo y orientado a resultados, con experiencia en construcción y optimización de aplicaciones web. Se destaca por su capacidad de trabajo en equipo y por aportar soluciones eficientes en entornos clínicos y corporativos.",
+    },
+    carlos: {
+      role: "Ingeniero Informático · Desarrollador FullStack y Flutter (Programador Full Stack en SDSTI)",
+      quote:
+        "Desarrollador con enfoque en aplicaciones móviles y web, especializado en Flutter y proyectos de turismo digital. Ha trabajado en soluciones innovadoras que integran frontend y backend con visión práctica y académica.",
+    },
+    luis: {
+      role: "Ingeniero Informático · Data Scientist Junior · Programador Junior · Profesor de educación tecnológica en Instituto Educativo CASD José Prudencio Padilla",
+      quote:
+        "Profesional comprometido y versátil, con experiencia en desarrollo backend, ciencia de datos y proyectos de investigación. Se caracteriza por su liderazgo, honestidad y capacidad para coordinar equipos en soluciones tecnológicas y científicas.",
     },
   },
   services: {

@@ -4,6 +4,7 @@ import About from "./About";
 import Skill from "./Skill";
 import Experience from "./Experience";
 import Proyect from "./Proyect";
+import Testimonials from "./Testimonials";
 import Services from "./Services";
 import Contact from "./Contact";
 import CustomCursor from "./CustomCursor";
@@ -18,6 +19,7 @@ const SECTION_IDS = [
   "Skill",
   "Proyects",
   "Experience",
+  "Testimonials",
   "Services",
   "Contact",
 ] as const;
@@ -62,6 +64,9 @@ function App() {
           </section>
           <section id="Experience" className="min-h-[calc(100vh-3.5rem)]">
             <Experience />
+          </section>
+          <section id="Testimonials" className="min-h-[calc(100vh-3.5rem)]">
+            <Testimonials />
           </section>
           <section id="Services" className="min-h-[calc(100vh-3.5rem)]">
             <Services />
