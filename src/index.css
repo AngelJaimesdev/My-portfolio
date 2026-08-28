@@ -15,4 +15,126 @@ h1, h2, h3, h4 {
   }
 }
 
+/* Custom cursor */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid #2563eb;
+  background: rgba(37, 99, 235, 0.2);
+  pointer-events: none;
+  z-index: 60;
+  mix-blend-mode: difference;
+  transform: translate(-100px, -100px);
+  transition: transform 0.12s ease-out, background-color 0.2s ease, border-color 0.2s ease;
+  will-change: transform;
+}
 
+.cursor-dot.is-hover {
+  --cursor-scale: 1.9;
+  background: rgba(37, 99, 235, 0.08);
+  border-color: #0ea5e9;
+}
+
+@media (pointer: coarse) {
+  .cursor-dot {
+    display: none;
+  }
+}
+
+/* ---- Animations ---- */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes blob-a {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, 8%, 0) scale(1.15);
+  }
+  100% {
+    transform: translate3d(-4%, -6%, 0) scale(0.95);
+  }
+}
+
+@keyframes blob-b {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-8%, -6%, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(5%, 7%, 0) scale(0.9);
+  }
+}
+
+@keyframes caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes preloader-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  will-change: transform;
+  opacity: 0.4;
+}
+
+.bg-blob--a {
+  animation: blob-a 22s ease-in-out infinite alternate;
+}
+
+.bg-blob--b {
+  animation: blob-b 28s ease-in-out infinite alternate;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.type-caret {
+  display: inline-block;
+  width: 2px;
+  animation: caret-blink 1s step-end infinite;
+}
+
+.preloader-sweep {
+  animation: preloader-sweep 1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-blob--a,
+  .bg-blob--b,
+  .animate-float,
+  .type-caret,
+  .preloader-sweep {
+    animation: none !important;
+  }
+}

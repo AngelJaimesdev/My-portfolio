@@ -2,8 +2,11 @@ import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { socialLinks } from "./socialLinks";
 import { useReveal, revealClass } from "./useReveal";
 import AnimatedBackground from "./AnimatedBackground";
+import ContactForm from "./ContactForm";
+import { useLang } from "./i18n";
 
 function Contact() {
+  const { t } = useLang();
   const { ref: contactRef, visible: contactVisible } = useReveal<HTMLDivElement>();
 
   return (
@@ -15,13 +18,15 @@ function Contact() {
         className={`relative z-10 w-full max-w-4xl flex flex-col items-center text-center ${revealClass(contactVisible)}`}
       >
         <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#2563eb] to-[#0ea5e9] bg-clip-text text-transparent">
-          Let's build something together
+          {t.contact.title}
         </h2>
-        <p className="text-[#94a3b8] mt-2 max-w-xl">
-          I'm open to new opportunities and collaborations. Feel free to reach out.
-        </p>
+        <p className="text-[#94a3b8] mt-2 max-w-xl">{t.contact.subtitle}</p>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+        <div className="mt-8 w-full flex justify-center">
+          <ContactForm />
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
           <a
             href={socialLinks.github}
             target="_blank"

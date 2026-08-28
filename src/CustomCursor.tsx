@@ -1,24 +1,46 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
+
+const INTERACTIVE = "a, button, input, textarea, select, label, [role='button']";
 
 function CustomCursor() {
-  const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const dotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const mouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+
+    const el = dotRef.current;
+    if (!el) return;
+
+    let frame = 0;
+    let x = 0;
+    let y = 0;
+
+    const render = () => {
+      frame = 0;
+      el.style.transform = `translate(${x - 12}px, ${y - 12}px) scale(var(--cursor-scale, 1))`;
     };
-    window.addEventListener("mousemove", mouseMove);
-    return () => window.removeEventListener("mousemove", mouseMove);
+
+    const onMove = (e: MouseEvent) => {
+      x = e.clientX;
+      y = e.clientY;
+      if (!frame) frame = requestAnimationFrame(render);
+    };
+
+    const onOver = (e: MouseEvent) => {
+      const target = e.target as Element | null;
+      el.classList.toggle("is-hover", !!target?.closest(INTERACTIVE));
+    };
+
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseover", onOver);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseover", onOver);
+      cancelAnimationFrame(frame);
+    };
   }, []);
 
-  return (
-    <div
-      className="z-50 fixed top-0 left-0 w-6 h-6 rounded-full pointer-events-none border border-[#2563eb] bg-[#2563eb]/20 mix-blend-difference transition-transform duration-150 ease-out"
-      style={{
-        transform: `translate(${position.x - 12}px, ${position.y - 12}px)`,
-      }}
-    ></div>
-  );
+  return <div ref={dotRef} className="cursor-dot" aria-hidden="true" />;
 }
 
 export default CustomCursor;
