@@ -17,7 +17,7 @@ const en = {
     projects: "Projects",
     experience: "Experience",
     testimonials: "Reviews",
-    services: "Services",
+    services: "Packages",
     contact: "Contact",
   },
   home: {
@@ -120,11 +120,11 @@ const en = {
     },
   },
   services: {
-    title: "Services",
+    title: "Packages",
     subtitle:
       "Do you have a business? I build custom websites so your business gets a strong online presence.",
     mostPopular: "Most popular",
-    from: "From",
+    quote: "Custom quote",
     delivery: "Estimated delivery:",
     cta: "Request via WhatsApp",
     footnote:
@@ -202,7 +202,7 @@ const es: Dict = {
     projects: "Proyectos",
     experience: "Experiencia",
     testimonials: "Reseñas",
-    services: "Servicios",
+    services: "Paquetes",
     contact: "Contacto",
   },
   home: {
@@ -305,11 +305,11 @@ const es: Dict = {
     },
   },
   services: {
-    title: "Servicios",
+    title: "Paquetes",
     subtitle:
       "¿Tienes un negocio? Construyo sitios web a la medida para que tu negocio tenga una presencia online sólida.",
     mostPopular: "Más popular",
-    from: "Desde",
+    quote: "Cotización personalizada",
     delivery: "Entrega estimada:",
     cta: "Solicitar por WhatsApp",
     footnote:

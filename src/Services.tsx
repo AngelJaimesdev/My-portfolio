@@ -10,8 +10,6 @@ type Plan = {
   tagline: string;
   delivery: string;
   features: string[];
-  price: string;
-  priceNote: string;
   featured: boolean;
 };
 
@@ -26,7 +24,7 @@ function PlanCard({
   index: number;
   visible: boolean;
   href: string;
-  labels: { mostPopular: string; delivery: string; cta: string };
+  labels: { mostPopular: string; delivery: string; cta: string; quote: string };
 }) {
   const tiltRef = useTilt<HTMLDivElement>(5);
 
@@ -54,10 +52,11 @@ function PlanCard({
         <h3 className="mt-2 text-center text-xl font-semibold text-white">{plan.name}</h3>
         <p className="mb-4 text-center text-sm text-[#7dd3fc]">{plan.tagline}</p>
 
-        <div className="mb-1 text-center">
-          <span className="text-2xl font-bold text-white md:text-3xl">{plan.price}</span>
+        <div className="mb-6 flex justify-center">
+          <span className="rounded-full border border-[#2563eb]/40 px-3 py-1 text-xs font-medium text-[#94a3b8]">
+            {labels.quote}
+          </span>
         </div>
-        <p className="mb-6 text-center text-xs text-[#94a3b8]">{plan.priceNote}</p>
 
         <ul className="mb-6 flex flex-1 flex-col gap-3">
           {plan.features.map((feature) => (
@@ -96,14 +95,9 @@ function Services() {
   const { ref: listRef, visible: listVisible } = useReveal<HTMLDivElement>();
 
   const plans: Plan[] = [
-    { ...t.services.basic, price: "$500.000 COP", priceNote: "≈ US$125", featured: false },
-    { ...t.services.professional, price: "$1.500.000 COP", priceNote: "≈ US$375", featured: true },
-    {
-      ...t.services.premium,
-      price: `${t.services.from} $4.000.000 COP`,
-      priceNote: "≈ US$1.000",
-      featured: false,
-    },
+    { ...t.services.basic, featured: false },
+    { ...t.services.professional, featured: true },
+    { ...t.services.premium, featured: false },
   ];
 
   const whatsappHref = (planName: string) =>
@@ -113,6 +107,7 @@ function Services() {
     mostPopular: t.services.mostPopular,
     delivery: t.services.delivery,
     cta: t.services.cta,
+    quote: t.services.quote,
   };
 
   return (
