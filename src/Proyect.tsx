@@ -127,6 +127,13 @@ function Proyect() {
       techs: ["Angular", "Ionic", "NestJS", "PostgreSQL"],
       apk: "/CV/app-debug.apk",
     },
+    {
+      title: t.projects.dodgeGame.title,
+      description: t.projects.dodgeGame.description,
+      image: "/assets/esquiva-sobrevive-thumb.svg",
+      techs: ["JavaScript", "HTML5 Canvas", "CSS3"],
+      demo: "/games/esquiva-sobrevive.html",
+    },
   ];
 
   const labels = {

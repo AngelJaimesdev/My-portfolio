@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="0%" r="100%">
+      <stop offset="0%" stop-color="#10151f"/>
+      <stop offset="80%" stop-color="#0a0e17"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="450" fill="url(#bg)"/>
+
+  <g stroke="#00e5ff" stroke-opacity="0.06">
+    <line x1="0" y1="60" x2="600" y2="60"/>
+    <line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="180" x2="600" y2="180"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="360" x2="600" y2="360"/>
+    <line x1="0" y1="420" x2="600" y2="420"/>
+    <line x1="60" y1="0" x2="60" y2="450"/>
+    <line x1="120" y1="0" x2="120" y2="450"/>
+    <line x1="180" y1="0" x2="180" y2="450"/>
+    <line x1="240" y1="0" x2="240" y2="450"/>
+    <line x1="300" y1="0" x2="300" y2="450"/>
+    <line x1="360" y1="0" x2="360" y2="450"/>
+    <line x1="420" y1="0" x2="420" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="540" y1="0" x2="540" y2="450"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <rect x="95" y="55" width="40" height="40" fill="#ff2e63" transform="rotate(18 115 75)"/>
+    <rect x="320" y="30" width="34" height="34" fill="#ff2e63" transform="rotate(-10 337 47)"/>
+
+    <path d="M480 60 L500 40 L520 60 L510 78 L490 78 Z" fill="#00e5ff"/>
+
+    <path d="M240 130 l14 -14 l14 14 l-14 34 l-14 -34 z" fill="#ffd23f"/>
+
+    <circle cx="420" cy="150" r="16" fill="none" stroke="#7b5cff" stroke-width="3"/>
+    <line x1="420" y1="150" x2="420" y2="138" stroke="#7b5cff" stroke-width="3"/>
+    <line x1="420" y1="150" x2="428" y2="156" stroke="#7b5cff" stroke-width="3"/>
+
+    <rect x="160" y="230" width="30" height="30" fill="#ff2e63" transform="rotate(30 175 245)"/>
+  </g>
+
+  <g filter="url(#glow)" transform="translate(300 340)">
+    <circle r="42" fill="none" stroke="#00e5ff" stroke-opacity="0.65" stroke-width="3"/>
+    <path d="M0 -22 L20 20 L0 12 L-20 20 Z" fill="#00e5ff"/>
+  </g>
+
+  <g font-family="Segoe UI, system-ui, sans-serif" text-anchor="middle">
+    <text x="300" y="405" font-size="28" font-weight="700" letter-spacing="2"
+      fill="none" stroke="#0a0e17" stroke-width="6" stroke-linejoin="round">ESQUIVA Y SOBREVIVE</text>
+    <text x="300" y="405" font-size="28" font-weight="700" letter-spacing="2" fill="#00e5ff">ESQUIVA Y SOBREVIVE</text>
+  </g>
+</svg>

@@ -78,6 +78,11 @@ const en = {
       description:
         "Mobile application for managing barbershops: appointments, clients and services, with a NestJS backend and PostgreSQL database.",
     },
+    dodgeGame: {
+      title: "Dodge & Survive",
+      description:
+        "Browser arcade game built with HTML5 Canvas and vanilla JavaScript: dodge falling obstacles, grab power-ups and beat your high score.",
+    },
   },
   experience: {
     title: "Work Experience",
@@ -262,6 +267,11 @@ const es: Dict = {
       title: "App de Gestión para Barberías",
       description:
         "Aplicación móvil para gestionar barberías: citas, clientes y servicios, con backend en NestJS y base de datos PostgreSQL.",
+    },
+    dodgeGame: {
+      title: "Esquiva y Sobrevive",
+      description:
+        "Juego arcade para navegador hecho con HTML5 Canvas y JavaScript puro: esquiva obstáculos, recoge power-ups y supera tu récord.",
     },
   },
   experience: {
