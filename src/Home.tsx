@@ -65,9 +65,9 @@ function Home() {
         >
           <div className="absolute w-64 h-80 md:w-80 md:h-96 bg-[#1d4ed8]/15 rounded-full blur-3xl" />
           <img
-            className="animate-float relative rounded-3xl shadow-xl shadow-[#1d4ed8]/20 border-4 border-[#2563eb]/50 w-64 md:w-100"
-            src="/assets/avatar-outdoor.webp"
-            alt="Angel Jaimes"
+            className="animate-float relative rounded-3xl shadow-xl shadow-[#1d4ed8]/20 border-4 border-[#2563eb]/50 w-64 md:w-100 aspect-[4/5] object-cover object-[50%_62%]"
+            src="/assets/mirador-ciudad.webp"
+            alt="Angel Jaimes en un mirador sobre la ciudad"
             width={400}
             height={500}
           />
